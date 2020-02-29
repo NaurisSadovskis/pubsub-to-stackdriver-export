@@ -1,19 +1,19 @@
 # Cloud PubSub to Stackdriver Logging export
-Export text or JSON data from Cloud PubSub to Stackdriver Logging using a Cloud Functions. This is useful when message volume is relatively low and the need to keep the complexity to a minimum.
+Export text or JSON data from Cloud PubSub to Stackdriver Logging using Cloud Functions. This is useful when message volume is relatively low and there is a need to keep the complexity to a minimum.
 
-## Why Stackdriver?
+## Why Stackdriver Logging?
 
-Having data in Stackdriver allows you to:
-* Perform basic queries on data Stackdriver Logging using `Advanced Filter`
-* Set up managed logging sinks to BigQuery, Cloud Storage and PubSub
-* Create custom metrics for Stackdriver Monitoring
+Having data in Stackdriver Logging allows you to:
+* Perform basic queries on structured data using `Advanced Filter`
+* Set up logging sinks to BigQuery, Cloud Storage and PubSub
+* Use log data to create custom metrics for Stackdriver Monitoring
 
 ## Potential use cases
 * Exporting data from Google services that do not support native export to BigQuery or GCS.
 * Third party integration.
 
 ## Approximate cost
-As mentioned this is cost-effective when data volume is low.
+As mentioned earlier, this is cost-effective when data volume is low.
 
 Below are some estimates data volume is 1 million 1 kB messages a month.
 * Cloud Functions: 1 mil invocations x 5 seconds each - `$8.22`
